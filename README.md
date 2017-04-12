@@ -19,16 +19,16 @@ Changes to the site can be tested locally before deploying to the web. To get se
 ## Deployment
 
  This repo is set to automatically deploy to Heroku. Any time there is a merge into develop, the develop branch will be deployed to refugestaging.herokuapp.com. Any time there is a merge into master, the master branch will be released to refugerestrooms.org
- 
+
  When making a release, you should do the following:
- 1. Check the status of the app on refugestaging.herokuapp.com and make sure it's functional. 
+ 1. Check the status of the app on refugestaging.herokuapp.com and make sure it's functional.
  2. Make sure the the most recent build of develop is passing on TravisCI
  3. Run `git flow release start %{release number}`
  4. Run `git shortlog --grep "Merge pull request #" %{previous release}..HEAD` and copy the contents into a new issue with the release tag here on github. This command gives you a list of PRs merged since the previous release.
  5. `git flow release finish` and copy the contents of #4 into the release tags.
  6. `git push` in the master branch and `git push --tags`
-  - this will trigger the heroku deploy to production. 
- 
+  - this will trigger the heroku deploy to production.
+ Kendra is changing something!!!!
 #### Manual Releases
 Currently, we deploy to Heroku. Our application is small enough that it is free to host on Heroku, and we dont mind the server having to wake up if nobody has accessed the site in a while.
 
